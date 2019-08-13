@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <div></div>
+            <div></div>
+            <h1>No name</h1>
+            <div></div>
+            <p id='top_right_link'><a href="{{ url_for('login') }}">Log in</a></p>
+        </header>
+        <form action="" method="post" class="container">
+                <div class="form_elemt_text">Just few fields to fill...</div>
+                <div class="form_elemt_error">{{ error }}</div>
+                <div class="form_elemt_inp"><input type="text" placeholder="Username" name="user" /></div>
+                <div class="form_elemt_inp"><input type="password" placeholder="Password" name="password" /></div>
+                <div class="form_elemt_inp"><input type="password" placeholder="Confirm password" name="confirm_pwd" /></div>
+                <div class="form_elemt_button"><button>Sign up</button></div>
+        </form>
+        <footer>
+            <p>Website made by Beh</p>
+        </footer>
+    </body>
+</html>

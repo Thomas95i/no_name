@@ -1,0 +1,271 @@
+/*
+Stylesheet made by Beh for No Name Website.
+*/
+
+*
+{
+    font-family: Verdana, sans-serif;
+    color: black;
+    /* border: 1px black solid; */
+}
+
+html
+{
+    min-height: 100vh;
+    min-width: 100vh;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color:rgb(37, 193, 255); */
+    background-image: url('views_images/background3.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+}
+
+header h1
+{
+    font-family: 'Vivaldi';
+    font-weight: bold;
+    justify-self: center;
+    font-size: 4em;
+    margin: auto;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgb(200, 200, 200);
+    width:20%;
+    color: white;
+}
+
+header div
+{
+    width:20%;
+}
+
+/* header p
+{
+    width:19%;
+    height: 80%; */
+    /* font-family: Arial; */
+    /* text-align: right;
+    align-self: center;
+    padding-top: 1%;
+    padding-right: 1%;
+} */
+
+#top_right_link
+{
+    width:19%;
+    height: 80%;
+    text-align: right;
+    align-self: center;
+    padding-top: 1%;
+    padding-right: 1%;
+    font-family: Arial;
+    font-size: 1.1em;
+    color: white;
+    /* text-decoration: none; */
+    text-shadow: 2px 2px 4px rgb(200, 200, 200);
+    font-weight: 400;
+}
+
+#top_left_link
+{
+    width:19%;
+    height: 80%;
+    /* font-family: Arial; */
+    text-align: left;
+    align-self: center;
+    padding-top: 1%;
+    padding-right: 1%;
+    font-family: Arial;
+    font-size: 1.1em;
+    color: white;
+    /* text-decoration: none; */
+    text-shadow: 2px 2px 4px rgb(200, 200, 200);
+    font-weight: 400;
+}
+
+header a:hover
+{
+    text-shadow: 2px 2px 4px rgb(255, 255, 100);
+}
+
+header a:visited
+{
+    color: rgb(215, 215, 215);
+}
+
+ .container
+{
+    width: 30%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px rgb(235, 235, 235) solid;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 40px;
+    box-shadow: 5px 5px 7.5px rgb(235, 235, 235);
+    padding: 5px;
+    font-size:1.5em;
+    text-shadow: 2px 2px 4px rgb(125, 125, 125);
+}
+
+.form_elemt_text
+{
+    font-size: 1.5em;
+    font-family: Impact, 'Arial Narrow Bold'; 
+}
+
+.form_elemt_error
+{
+    font-size: 1.125em;
+    color: red;
+
+}
+
+/* .form_elemt_inp
+{
+    box-shadow: 4px 4px 12px rgb(125, 125, 125) inset;
+} */
+
+footer p
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75em;
+    color: white;
+}
+
+.users_list_container
+{
+    height: 50vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px rgb(235, 235, 235) solid;
+    border-radius: 40px;
+    box-shadow: 5px 5px 7.5px rgb(235, 235, 235);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.users_list_container h1
+{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 2em;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgb(125, 125, 125);
+}
+
+.profile_container
+{
+    width: 75%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px rgb(235, 235, 235) solid;
+    border-radius: 40px;
+    box-shadow: 5px 5px 7.5px rgb(235, 235, 235);
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.profile_subcontainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.profile_subcontainer div
+{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 4px rgb(125, 125, 125);
+}
+
+.profile_subcontainer div h1
+{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile_subcontainer div h1 span
+{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 1.5em;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgb(125, 125, 125);
+}
+
+.profile_subcontainer div textarea, .profile_subcontainer div p
+{
+    height: 70%;
+    width: 100%;
+}
+textarea
+{
+    resize: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+ul
+{
+    list-style: none;
+    margin-left: none;
+    padding-left: none;
+}
+
+li
+{
+    margin-left: 5%;
+    margin-bottom: 0.5%;
+}
+
+.modif_profile_subcontainer
+{
+    height: 9%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modif_profile_subcontainer div
+{
+    padding-left: 2%;
+    padding-right: 3%;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <p id='top_left_link'><a href="/{{myId}}/">My profile</a></p>
+            <div></div>
+            <h1>No name</h1>
+            <div></div>
+            <p id='top_right_link'><a href="{{ url_for('logout') }}">Log out</a></p>
+        </header>
+        <section class='users_list_container'>
+            <h1>Other user</h1>
+            <ul>
+                {% for item in users_list %}
+                <li><a href='/{{item[0]}}/'>{{ item[1] }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        <footer>
+            <p>Website made by Beh</p>
+        </footer>
+    </body>
+</html>

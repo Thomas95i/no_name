@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 align='center'>
+            {{ username }}
+        </h1>
+        <div align='center'>
+            <table>
+                <tr>
+                    <td>
+                        <img src=" {{ user_pic }}" alt="A jamais les premiers" />
+                    </td>
+                    <td>
+                        {{ profile_text }}
+                    </td>
+                </tr>
+                {% if own_profile == True %}
+                <tr>
+                    <td>
+                        <form action ="" method = "post" enctype="multipart/form-data">
+                            <input type="file" placeholder="Choose a file..." name="up_file" />
+                            <input type="submit" value="Upload pic" />        
+                        </form>
+                    </td>
+                    <td>
+                        <!-- <form action="" method="post">
+
+                        </form> -->
+                        Edit Text : Feature implemented very soon...
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+        <div align='center'>
+            <h2>Other users:</h2>
+            <ul>
+                {% for item in user_list %}
+                <li><a href='/{{item[0]}}/'>{{ item[1] }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>

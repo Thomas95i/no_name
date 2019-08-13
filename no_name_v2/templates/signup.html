@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 align='center'>
+            Sign up
+        </h1>
+        <div align='center'>
+        {% if existing_user == True %}
+            <p>There is already an account linked to this username.</p>
+        {% endif %}
+        </div>
+        <div align='center'>
+        {% if not_same_password == True %}
+            <p>The second password doesn't match the first.</br>
+                Please, pay closer attention when you fill this form.</p>
+        {% endif %}
+        </div>
+        <div align='center'>
+        {% if dickhead == True %}
+            <p>Hey, dickhead ! You need to fill both username and password fields.</br>
+                There is only two fields to fill. Even you can do it !!</p>
+        {% endif %}
+        </div>        
+        <div align='center'>
+            <form action="" method = "post">
+                <div>
+                    <input type="text" placeholder="Username" name='username'>
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" name='password'>
+                </div>
+                <div>
+                    <input type="password" placeholder="Confirm password" name='confirm_pwd'>
+                </div>    
+                <div>
+                    <input type="submit" value="Sign up" />
+                </div> 
+            </form>
+        </div>
+    </body>
+</html>

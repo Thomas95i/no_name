@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 align='center'>
+            Are you an authorized user ?
+        </h1>
+        {% if unknown_user == True %}
+        <div align='center'>
+            <p>Unknown username. Please sign up.</p>
+        </div>
+        {% endif %}
+        {% if unknown_pwd == True %}
+        <div align='center'>
+            <p>Wrong password</p>
+        </div>
+        {% endif %}
+        <div align='center'>
+            <p>
+                <form action="" method="post">
+                    <div>
+                        <input type="text" Placeholder="Username" name="user" />
+                    </div>
+                    <div>
+                        <input type="password" Placeholder="password" name="password" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign in" />
+                    </div>
+                </form>
+            </p>
+        </div>
+        <div align='center'>
+            <a href="{{ url_for('sign_up')}}"><button>Sign up</button></a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ title }}</title>
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <p id='top_left_link'><a href="{{ url_for('users_list') }}">Other users</a></p>
+            <div></div>
+            <h1>No name</h1>
+            <div></div>
+            <p id='top_right_link'><a href="{{ url_for('logout') }}">Log out</a></p>
+        </header>
+        {% if own_profile == True %}
+        <form class="profile_container" method='post' enctype="multipart/form-data">
+            <div class="profile_subcontainer">
+                <p><img src="{{ user_pic }}" alt="Profile picture" title="Pretty, isn't it ?"></p>
+                <div>
+                    <h1><span>{{user_name}}</span></h1>
+                    <textarea name='desc_profile'>{{ desc_profile }}</textarea>
+                </div>
+            </div>
+            <div class='modif_profile_subcontainer'>
+                <div><input type='file' Placeholder='Choose a file...' name='up_file' /></div>
+                <div><button>Save Modifications</button></div>
+            </div>
+        </form>
+        {% endif %}
+        {% if own_profile == False %}
+        <div class='profile_container'>
+            <div class="profile_subcontainer">
+                <p><img src="{{ user_pic }}" alt="Profile picture" title="Pretty, isn't it ?"></p>
+                <div>
+                    <h1>{{user_name}}</h1>
+                    <p>{{ desc_profile }}</p>
+                </div>
+            </div>
+            <div class='modif_profile_subcontainer'>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        {% endif %}
+        <footer>
+            <p>Website made by Beh</p>
+        </footer>
+    </body>
+</html>
